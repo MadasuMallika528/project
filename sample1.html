@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Peace</title>
+    <style>
+       .btn{
+        margin: 10px;
+    }  
+    .nav_menu{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            font: size 5rem;
+           
+            font-weight: 700;
+        }
+        p{
+  padding:5px 30px 0px 30px;
+  font-size: large;
+    }
+    h2{
+        padding:30px 30px 0px 30px; 
+                text-align: center;
+                border-radius: 50px;
+                width: 1000px;
+                margin: 10px 10px 30px 10px;
+                color: yellow;
+    }
+    h3{
+        padding:0px 30px 0px 30px;
+        border: 2px silver solid;
+                border-radius: 50px;
+                text-align: center;
+                background-color: purple;
+                margin: 10px 10px 30px 10px;
+                color: yellow;
+    }
+  
+    ul{
+      padding:5px 30px 0px 30px;
+      font-size: large;
+
+    } 
+    .img{
+                border: 1px solid #bbb;
+                border-radius: 5px;
+                padding: 10px;
+                width:4500px;
+            }
+            .modal-content{
+            background-image: url(data:image/jpeg;base64,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);       
+             background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size:100% 100%;
+          }
+        
+    </style>
+  </head>
+  <body style="background-color: bisque;">
+     <!--NAVBAR-->   
+<nav class="navbar navbar-expand-md bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-nav nav_menu">
+          <center><a href="#MEDITATION" class="logo" style="font-size: 30px;">Peace<img src="https://cdn.pixabay.com/photo/2015/10/30/10/22/logo-1013649__340.jpg" alt=""  style=" width:30px;height: 30px;"></a></center>
+            <a href="#MEDITATION" class="btn btn-primary nav-item"><i class="bi bi-house-heart-fill"></i> Home</a>
+            <a href="#about" class="btn btn-primary nav-item">About</a>
+            <a href="meditate.html" class="btn btn-primary nav-item">Meditations</a>
+            <a href="benefits.html" class="btn btn-primary nav-item">Benefits</a>
+            <a href="music.html" class="btn btn-primary nav-item"><i class="bi bi-music-note-beamed"></i> Meditation Music</a>
+            <a href="#contact" class="btn btn-primary nav-item"><i class="bi bi-telephone-fill"></i> Contact Us</a>
+            <a href="" class="btn btn-primary nav-item" data-bs-target="#modal143" data-bs-toggle="modal"><i class="bi bi-person-fill-check"></i> Signin</a>
+            <a href="" class="btn btn-primary nav-item" data-bs-target="#modal123" data-bs-toggle="modal"><i class="bi bi-box-arrow-right"></i> Signup</a>
+            
+        </div>
+    </div>
+    </nav>
+  
+   <!--carousel-->
+   <div class="carousel slide" data-bs-ride="carousel" id="abc">
+    <ul class="carousel-indicators">
+        <li data-bs-target="#abc" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#abc" data-bs-slide-to="1"></li>
+        <li data-bs-target="#abc" data-bs-slide-to="2"></li>
+        <li data-bs-target="#abc" data-bs-slide-to="3"></li>
+        <li data-bs-target="#abc" data-bs-slide-to="4"></li>
+    </ul>
+ 
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://media.istockphoto.com/id/1313456479/photo/man-and-soul-yoga-lotus-pose-meditation-on-nebula-galaxy-background.jpg?b=1&s=170667a&w=0&k=20&c=p_EQSpHfArCOvibKe7ypoyFZERAiEFHuFx4weXiHd0g=" alt="" class="w-100" style="height: 400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjwvT1eQSqznM3HqV2XwaM4sD93XLG-A1-lw&usqp=CAU" alt="" class="w-100" style="height: 400px;">
+            </div>
+            <div class="carousel-item">
+              <img src="https://cdn.pixabay.com/photo/2013/05/12/18/55/balance-110850__340.jpg" alt="" class="w-100" style="height: 400px;">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2017/03/26/21/54/yoga-2176668__340.jpg" alt="" class="w-100" style="height: 400px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://cdn.pixabay.com/photo/2020/03/21/19/27/sea-4955005__340.jpg" alt="" class="w-100" style="height: 400px;">
+                  </div>
+    
+
+          <div class="carousel-caption text-dark">
+            <h2 style="color: rgb(232, 213, 213);">“Brilliant things happen in calm minds.<br>Be calm. You're brilliant.”</h2>
+          </div>
+        </div>
+ 
+            <a href="#abc" class="carousel-control-prev" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+            <a href="#abc" class="carousel-control-next" data-bs-slide="next"><span class="carousel-control-next-icon"></span></a>
+     </div>
+     <br>
+     <hr>
+     <br> 
+     <div id="MEDITATION">
+      <div class="row">
+        <div class="col">
+      <h3> YOUR FIRST MEDITATION</h3> 
+        <p>After reading and digesting the scholarly discussion on the myriad health
+          benefits attributed to meditation, it is quite tempting for the busy physician
+          to simply tell his patients that they “need to meditate.” However, when that
+          recommendation — no matter how sincere, well-meaning or intellectually
+          appropriate — is given by a physician that has not himself learned to meditate,
+          the recommendation becomes hollow, compared to the same recommendation from a regular meditator.<br>
+           Personal experience with meditation is required in order to accurately and
+          sincerely communicate the benefits you expect an individual patient, with his
+          or her unique needs, to experience, and it is impossible to present that information with clarity unless you “know” how the practice of meditation has
+          eff ected your own life and health. Once you can speak using the authority of
+          personal experience as part of the basis for your “meditation prescription,” as
+          well as actually guide your patients as you provide specific instructions on how
+          to meditate, it will be extremely hard for your patients not to pick up on the
+          conviction behind your recommendations, making them far more likely to be
+          implemented. After all, doesn’t every physician want his patients to follow his
+          advice so they can achieve better health? Learning to meditate and starting a
+          regular meditation practice are vitally important ways to improve the lives of
+          patients and physicians alike.<br>
+           The main objective of the meditative experience is to shift the focus of the
+          mind away from the frenzied thoughts of everyday living, such as worries
+          about work, family, finances or simply the “to-do list” of the day. There are
+          countless ways, or techniques, to do this. </p>
+          <img src="https://wallpaperaccess.com/full/534399.jpg" alt="" style="width: 100%;">
+          
+          </div>
+          <div class="col">
+            <img src="https://wallpaperaccess.com/full/180522.jpg" alt="not found" style="width: 100%;"><br><br>
+            <h3>EXAMPLES OF MEDITATION</h3>
+   <p>       
+• Can you think of an activity in which you totally lose track of time?
+When your attention is so focused that you say, “I don’t know where
+the time went?” Examples might be: painting or drawing, working in
+the garden, staring at the ocean, playing with your pet, journaling,
+teaching your child how to play a sport, dancing freely to your favorite music, etc. I found that when I was in the operating room performing surgery, I was so focused that my operations became true
+meditations.<br>
+• All of these situations are meditative experiences because there are no
+thoughts about the past or the future; the mind is thinking only of the
+present moment.<br>
+• So as you reflect on the experience(s) in your life where you lost track
+of time, you will realize that you also lost track of whatever was in
+your life that was causing you stress, whether it was a toxic relationship, a chronic illness, or the sadness that comes with grief or loss. 
+</p>
+          
+          </div>
+         
+      </div>
+
+     </div>
+
+     <div id="about">
+      <div class="row">
+        <div class="col">
+      <h3>ABOUT US</h3>
+      <p>An important final note is that this discussion, as stated in the title, was
+designed to deliver information on how to meditate at an introductory level. It
+was important to take information that was previously held secret and
+explained in complicated ways, and to package it to be readily understandable.
+I wanted to teach meditation in a way that could be embraced and understood
+by all, without the religious or cultural overtones that can serve as a block for
+some, or a source of deep meaning for others. While this approach has necessitated making arbitrary classifi cations and eliminating discussion of the spiritual aspects of a meditation practice, I know, through my own personal
+journey and professional experience, that practicing meditation in this religiously neutral, simple, and practical way has helped transform the lives of
+thousands of people. It is my firm belief that those that wish to learn and experience the esoteric and spiritual benefi ts of meditation will be led to, and will
+find, that which they sincerely seek.</p>
+
+<img src="https://wallpaperaccess.com/full/534379.jpg" alt="" style="width: 100%;">
+</div>
+
+<div class="col">
+  <div id="contact">
+<h3>CONTACT US</h3>
+<img src="https://media.istockphoto.com/id/1129113667/photo/got-a-problem-contact-us.jpg?s=612x612&w=0&k=20&c=XY6CdTS4PlkiS2rw_EWmJdg7_fG5o4t28xxL5GU9d0E=" alt="" style="width:100% ;">
+<br><br>
+<center><h4 style="color:darkgoldenrod;">Any queries:<h4><br>
+<i class="bi bi-telephone"></i>+919676547206<br><br>
+<i class="bi bi-envelope"></i> peacefulmind@gmail.com<br><br>
+<i class="bi bi-facebook"></i> peacefulmind<br><br>
+<i class="bi bi-whatsapp"></i> +919676547206</center>
+  </div>
+</div> 
+ </div>
+ </div>
+
+ <div class="modal fade" id="modal123">
+  <div class="modal-dialog ">
+      <div class="modal-content">
+       <div class="modal-header">
+        <h3 class="text-light">Sign up</h3>
+        <button type="button" class="btn btn-light btn-close" data-bs-dismiss="modal"></button>
+       </div>
+       <div class="modal-body">      
+<form onsubmit="return conform_password()"  name="form">
+<label for="">Firstname: </label><br>
+  <input type="text" name="Fname" id="Fname " required><br>
+  <label for="">Lastname: </label><br>
+  <input type="text" name="Lname" id="Lname" required><br>
+  <label for="">Email Address: </label><br>
+  <input type="email" name="email" id="email" required><br>
+  <label for="">Username: </label><br>
+  <input type="text" name="user" id="user" required><br>
+  <label for="">Password:</label><br> 
+  <input type="password" name="password1" id="password1" required><br>
+ <label for=""> Confirm Password:</label><br> 
+<input type="password" name="password" id="password" required ><br>
+  <input type="submit" value="Sign up" class="btn btn-primary">
+</form>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function conform_password(){
+             var pw1 = document.form.password1.value;
+             var pw2 = document.form.password.value;
+             
+             if(pw1 == pw2){
+               alert("Welcome!!!");
+             }
+             else{
+              alert("Hey! the conform password is not matching with the password");
+             }
+          }
+  
+  
+  </script>
+  
+
+<div class="modal fade" id="modal143">
+  <div class="modal-dialog ">
+      <div class="modal-content">
+       <div class="modal-header">
+        <h3 class="text-light">Sign in</h3>
+        <button type="button" class="btn btn-light btn-close" data-bs-dismiss="modal"></button>
+       </div>
+       <div class="modal-body">      
+<form onsubmit="return conform_password()"  name="form">
+  <label for="">Username/Email address: </label><br>
+  <input type="text" name="user" id="user" required><br>
+  <label for="">Password:</label><br> 
+  <input type="password" name="password2" id="password2" required><br>
+  <input type="submit" value="Sign in" class="btn btn-primary">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function confrm_password(){
+           var pw1 = document.form.password1.value;
+           var pw2 = document.form.password2.value;
+           
+           if(pw1 == pw2){
+             alert("Login succeded!!!");
+           }
+           else{
+            alert("Login failed due to incorrect password/username");
+           }
+        }
+
+
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>
